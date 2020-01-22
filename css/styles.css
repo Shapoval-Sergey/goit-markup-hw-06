@@ -69,22 +69,25 @@ p {
 }
 
 .titles {
-  display: flex;
-  flex-direction: column;
+  display: block;
   color: var(--h2-color);
   font-family: var(--main-font);
   font-weight: 700;
   font-size: 48px;
   margin: 0px;
-  align-items: center;
-  margin-bottom: 26px;
+  text-align: center;
 }
 
 .titles::after {
-  content: url('../images/section-title.png');
+  display: block;
+  content: '';
+  background-image: url('../images/section-title.png');
   height: 15px;
   width: 164px;
   margin-bottom: 80px;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .overlay::before {
@@ -127,6 +130,7 @@ p {
   border: 0px;
   padding: 0px;
   cursor: pointer;
+  background-color: transparent;
   transition: background-color var(--animation-time)
     cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -342,11 +346,11 @@ p {
 }
 
 .about-list {
-  display: flex;
-  flex-direction: column;
-  flex-basis: 255px;
-  align-items: center;
+  display: block;
+  width: 255px;
+  text-align: center;
   margin-right: 30px;
+  list-style-type: none;
 }
 
 .about-list:nth-child(4n) {
@@ -355,30 +359,42 @@ p {
 
 .setting::before {
   content: url('../images/about-png/setting.png');
+  display: block;
   width: 66px;
   height: 66px;
   margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .money::before {
   content: url('../images/about-png/bank.png');
+  display: block;
   width: 58px;
   height: 53px;
   margin-bottom: 62px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .map::before {
   content: url('../images/about-png/map.png');
+  display: block;
   width: 58px;
   height: 59px;
   margin-bottom: 58px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .compas::before {
   content: url('../images/about-png/compas.png');
+  display: block;
   width: 56px;
   height: 66px;
   margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .name-paragraph {
@@ -681,9 +697,9 @@ p {
   align-items: center;
 }
 
-.sectoin-title-newslatter::after {
-  content: url('../images/section-line.png');
-  margin-bottom: 30px;
+.sectoin-title-newslatter::after{
+  content: '';
+  background-image: url('../images/section-line.png');
 }
 
 .newslatter-text {
